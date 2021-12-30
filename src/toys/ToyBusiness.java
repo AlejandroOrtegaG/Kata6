@@ -1,23 +1,31 @@
 package toys;
 
+import toyproducts.Toy;
+import toyproducts.models.HelicopterToy;
+import toyproducts.models.CarToy;
+
 public class ToyBusiness {
 
     final private SerialNumberGenerator sng = new SerialNumberGenerator();
 
-    public Car createCar() {
+    public Toy createToy(String type) {
+        switch (type) {
+            default:
+                return null;
+                
+            case "car":
 
-        Car coche = new Car(sng.next());
-        coche.pack();
-        coche.label();
+                CarToy coche = new CarToy(sng.next());
+                coche.pack();
+                coche.label();
+                return coche;
 
-        return coche;
-    }
+            case "helicopter":
 
-    public Helicopter createHelicopter() {
-        Helicopter helicoptero = new Helicopter(sng.next());
-        helicoptero.pack();
-        helicoptero.label();
-
-        return helicoptero;
+                HelicopterToy helicoptero = new HelicopterToy(sng.next());
+                helicoptero.pack();
+                helicoptero.label();
+                return helicoptero;
+        }
     }
 }

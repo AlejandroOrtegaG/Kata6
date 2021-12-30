@@ -2,16 +2,16 @@ package toys;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import toyproducts.Toy;
+import toys.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        SerialNumberGenerator sng = new SerialNumberGenerator();
         ToyBusiness toyBusiness = new ToyBusiness();
 
-        ArrayList<Car> coches = new ArrayList<>();
-        ArrayList<Helicopter> helicopteros = new ArrayList<>();
+        ArrayList<Toy> toys = new ArrayList<>();
 
         System.out.println("Introduzca una orden (exit para salir):");
         Scanner s = new Scanner(System.in);
@@ -19,22 +19,22 @@ public class Main {
 
         while (!instruccion.equals("exit")) {
             instruccion = s.nextLine();
-
+            
             switch (instruccion) {
-                default:
-                    System.out.println("Command unknown!");
-                    break;
-                case "car":
+            default:
+                System.out.println("Command unknown!");
+                break;
+                
+            case "car":
+                
+                toys.add(toyBusiness.createToy(instruccion));
+                break;
+                
+            case "helicopter":
 
-                    coches.add(toyBusiness.createCar());
-
-                    break;
-                case "helicopter":
-
-                    helicopteros.add(toyBusiness.createHelicopter());
-
-                    break;
-
+                toys.add(toyBusiness.createToy(instruccion));
+                break;
+                
             }
         }
     }
