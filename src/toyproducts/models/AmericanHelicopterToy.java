@@ -1,17 +1,22 @@
 package toyproducts.models;
+
 import toyproducts.Toy;
 
-public class HelicopterToy implements Toy{
+public class AmericanHelicopterToy implements Toy{
 
     private final Integer serialNumber;
-    private final String type = "helicoptero";
+    private final String type = "coche";
 
-    public HelicopterToy(Integer serialNumber) {
+    public AmericanHelicopterToy(Integer serialNumber) {
         this.serialNumber = serialNumber;
     }
 
     public void pack() {
         System.out.println("Empaquetando " + type + " con sn: " + serialNumber);
+    }
+
+    public String getType() {
+        return type;
     }
 
     public void label() {
@@ -21,9 +26,5 @@ public class HelicopterToy implements Toy{
     @Override
     public int getSerialNumber() {
         return serialNumber;
-    }
-
-    public String getType() {
-        return type;
     }
 }

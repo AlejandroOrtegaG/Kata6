@@ -1,12 +1,12 @@
 package toyproducts.models;
 import toyproducts.Toy;
 
-public class CarToy implements Toy{
+public class AsianCarToy implements Toy{
 
     private final Integer serialNumber;
     private final String type = "coche";
 
-    public CarToy(Integer serialNumber) {
+    public AsianCarToy(Integer serialNumber) {
         this.serialNumber = serialNumber;
     }
 

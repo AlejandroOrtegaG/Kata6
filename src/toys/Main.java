@@ -1,15 +1,18 @@
 package toys;
 
+import branches.AmericanToyBusiness;
+import branches.AsianToyBusiness;
+import business.ToyBusiness;
 import java.util.ArrayList;
 import java.util.Scanner;
 import toyproducts.Toy;
-import toys.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ToyBusiness toyBusiness = new ToyBusiness();
+        ToyBusiness toyBusiness = new AsianToyBusiness();
+        //ToyBusiness toyBusiness = new AmericanToyBusiness();
 
         ArrayList<Toy> toys = new ArrayList<>();
 
