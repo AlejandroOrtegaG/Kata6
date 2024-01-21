@@ -17,7 +17,7 @@ public class StrHandleTests {
     }
     @Test
     public void testToUpperCase(){
-        String str = StrHandle.strToLowerCase("");
+        String str = StrHandle.strToUpperCase("");
         assertEquals("",str);
     }
     @Test
@@ -31,7 +31,7 @@ public class StrHandleTests {
         assertEquals("",str);
     }
     @Test
-    public void testConcat(){
+    public void testGetChar(){
         String str = StrHandle.strGetChar("");
         assertEquals("",str);
     }
