@@ -7,32 +7,32 @@ public class StrHandleTests {
 
     @Test
     public void testConcat(){
-        String str = StrHandle.strConcat("","");
-        assertEquals("",str);
+        String str = StrHandle.strConcat("Hola ","mundo");
+        assertEquals("Hola mundo",str);
     }
     @Test
     public void testToLowerCase(){
-        String str = StrHandle.strToLowerCase("");
-        assertEquals("",str);
+        String str = StrHandle.strToLowerCase("HOLA MUNDO");
+        assertEquals("hola mundo",str);
     }
     @Test
     public void testToUpperCase(){
-        String str = StrHandle.strToUpperCase("");
-        assertEquals("",str);
+        String str = StrHandle.strToUpperCase("hola mundo");
+        assertEquals("HOLA MUNDO",str);
     }
     @Test
     public void testRemoveChar(){
-        String str = StrHandle.strRemoveChar("",'a');
-        assertEquals("",str);
+        String str = StrHandle.strRemoveChar("Hola mundo",'a');
+        assertEquals("Hol mundo", str);
     }
     @Test
     public void testRemoveCharWithIndex(){
-        String str = StrHandle.strRemoveChar("",0);
-        assertEquals("",str);
+        String str = StrHandle.strRemoveChar("Hola mundo",1);
+        assertEquals("ola mundo",str);
     }
     @Test
     public void testGetChar(){
-        String str = StrHandle.strGetChar("");
-        assertEquals("",str);
+        String str = StrHandle.strGetChar("Hola mundo", 1);
+        assertEquals("H",str);
     }
 }
